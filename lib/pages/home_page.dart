@@ -1,4 +1,5 @@
 import 'package:dashboard_reborn/TeamMemberPages/raff.dart';
+import 'package:dashboard_reborn/TeamMemberPages/andrew.dart';
 import 'package:dashboard_reborn/utils/colors.dart';
 import 'package:dashboard_reborn/utils/text_styles.dart';
 import 'package:dashboard_reborn/utils/ui_helpers.dart';
@@ -99,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   CupertinoPageRoute(
                                     builder: (context) {
                                       if (index == 0) {
-                                        return RaffPage();
+                                        return AndrewPage();
                                       } else if (index == 1) {
                                         return RaffPage();
                                       } else if (index == 2) {
