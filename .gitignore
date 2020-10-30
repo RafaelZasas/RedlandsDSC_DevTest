@@ -25,3 +25,9 @@ doc/api/
 ./idea
 ./idea/
 .idea/libraries
+
+.flutter-plugins
+.flutter-plugins/
+.flutter-plugins-dependencies
+android/.gradle/
+iosRunner/

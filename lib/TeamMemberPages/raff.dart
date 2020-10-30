@@ -11,9 +11,11 @@ class _RaffPageState extends State<RaffPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Text(
-          "Raffs Page",
-          style: TextStyle(fontSize: 50),
+        child: Center(
+          child: Text(
+            "Raffs Page",
+            style: TextStyle(fontSize: 50),
+          ),
         ),
       ),
     );
