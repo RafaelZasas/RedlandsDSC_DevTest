@@ -1,6 +1,7 @@
 import 'package:dashboard_reborn/TeamMemberPages/andrew.dart';
 import 'package:dashboard_reborn/TeamMemberPages/gavi.dart';
 import 'package:dashboard_reborn/TeamMemberPages/raff.dart';
+import 'package:dashboard_reborn/TeamMemberPages/thomas.dart';
 import 'package:dashboard_reborn/utils/colors.dart';
 import 'package:dashboard_reborn/utils/text_styles.dart';
 import 'package:dashboard_reborn/utils/ui_helpers.dart';
@@ -30,6 +31,9 @@ class _MyHomePageState extends State<MyHomePage> {
       'Justin',
       'Malachi',
       'Shlok',
+      'Thomas',
+      'Melina'
+
     ]; //name of each individual tile
 
     return Scaffold(
@@ -119,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       } else if (index == 8) {
                                         return RaffPage();
                                       } else if (index == 9) {
-                                        return RaffPage();
+                                        return TomPage();
                                       } else {
                                         return null;
                                       }
