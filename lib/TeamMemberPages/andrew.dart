@@ -11,11 +11,14 @@ class _AndrewPageState extends State<AndrewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Text(
-          "Andrew Yip's Page",
-          style: TextStyle(fontSize: 50),
+        child: Center(
+          child: Text(
+            "Andrew Yip",
+            style: TextStyle(fontSize: 50),
+          ),
         ),
       ),
+
     );
   }
 }
