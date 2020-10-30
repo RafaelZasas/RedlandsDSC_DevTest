@@ -16,7 +16,7 @@ class _MaggiePageState extends State<MaggiePage> {
             "Maggie's Page",
             style: TextStyle(
               fontSize: 50,
-              color: Colors.purpleAccent[100]
+              color: Colors.purpleAccent[400]
             ),
           ),
         ),
