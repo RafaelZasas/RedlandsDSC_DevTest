@@ -24,3 +24,4 @@ doc/api/
 .idea
 ./idea
 ./idea/
+.idea/libraries
