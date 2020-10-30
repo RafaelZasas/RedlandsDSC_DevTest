@@ -11,9 +11,14 @@ class _MaggiePageState extends State<MaggiePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Text(
-          "Maggie's Page",
-          style: TextStyle(fontSize: 50),
+        child: Center(
+          child: Text(
+            "Maggie's Page",
+            style: TextStyle(
+              fontSize: 50,
+              color: Colors.purpleAccent[100]
+            ),
+          ),
         ),
       ),
     );
