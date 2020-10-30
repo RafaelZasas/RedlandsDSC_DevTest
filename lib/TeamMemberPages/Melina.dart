@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MaggiePage extends StatefulWidget {
+class MelinaPage extends StatefulWidget {
   @override
-  _MaggiePageState createState() => _MaggiePageState();
+  _MelinaPageState createState() => _MelinaPageState();
 }
 
-class _MaggiePageState extends State<MaggiePage> {
+class _MelinaPageState extends State<MelinaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         child: Text(
-          "Maggie's Page",
+          "Melina's Page",
           style: TextStyle(fontSize: 50),
         ),
       ),

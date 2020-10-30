@@ -12,7 +12,7 @@ class _GaviPageState extends State<GaviPage> {
     return Scaffold(
       body: Container(
         child: Text(
-          "Gavi",
+          "Gavi\'s Page",
           style: TextStyle(fontSize: 50),
         ),
       ),

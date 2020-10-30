@@ -1,6 +1,13 @@
+import 'package:dashboard_reborn/TeamMemberPages/Melina.dart';
 import 'package:dashboard_reborn/TeamMemberPages/andrew.dart';
 import 'package:dashboard_reborn/TeamMemberPages/gavi.dart';
+import 'package:dashboard_reborn/TeamMemberPages/justin.dart';
+import 'package:dashboard_reborn/TeamMemberPages/maggie.dart';
+import 'package:dashboard_reborn/TeamMemberPages/malachi.dart';
+import 'package:dashboard_reborn/TeamMemberPages/paetin.dart';
 import 'package:dashboard_reborn/TeamMemberPages/raff.dart';
+import 'package:dashboard_reborn/TeamMemberPages/shlok.dart';
+import 'package:dashboard_reborn/TeamMemberPages/simmy.dart';
 import 'package:dashboard_reborn/TeamMemberPages/thomas.dart';
 import 'package:dashboard_reborn/utils/colors.dart';
 import 'package:dashboard_reborn/utils/text_styles.dart';
@@ -33,7 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
       'Shlok',
       'Thomas',
       'Melina'
-
     ]; //name of each individual tile
 
     return Scaffold(
@@ -52,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'Dashboard Reborn',
+                    'DSC UR',
                     style: isThemeCurrentlyDark(context) ? TitleStylesDefault.white : TitleStylesDefault.black,
                   ),
                 ],
@@ -109,22 +115,25 @@ class _MyHomePageState extends State<MyHomePage> {
                                       } else if (index == 1) {
                                         return RaffPage();
                                       } else if (index == 2) {
-                                        return RaffPage();
+                                        return MaggiePage();
                                       } else if (index == 3) {
-                                        return RaffPage();
-                                      } else if (index == 4) {
                                         return GaviPage();
+                                      } else if (index == 4) {
+                                        return SimmyPage();
                                       } else if (index == 5) {
-                                        return RaffPage();
+                                        return PaetinPage();
                                       } else if (index == 6) {
-                                        return RaffPage();
+                                        return JustinPage();
                                       } else if (index == 7) {
-                                        return RaffPage();
+                                        return MalachiPage();
                                       } else if (index == 8) {
-                                        return RaffPage();
+                                        return ShlokPage();
                                       } else if (index == 9) {
                                         return TomPage();
-                                      } else {
+                                      } else if (index == 10) {
+                                        return MelinaPage();
+                                      }
+                                      {
                                         return null;
                                       }
                                     },

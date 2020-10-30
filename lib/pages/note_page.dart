@@ -14,8 +14,12 @@ class MyNotePage extends StatefulWidget {
 
 class _MyNotePageState extends State<MyNotePage> {
   List<String> itemContent = [
-    'Note: this app does nothing.',
-    'Yep, you read that right! It\'s only meant to serve as a UI template for Flutter developers to use in their own apps.\n\nThe entire source code is freely available on GitHub, so you can tweak it and use it as per your liking.\n\nEnjoy, and don\'t forget to star the project on GitHub. It really helps me out!\n\n- Urmil Shroff',
+    'DSC Dev-Team at the University of Redlands.',
+    'This will be the first small scale project we collaborate on. It\'s not meant to be anything serious- Just a '
+        'way for us to dip our toes into Flutter and collaborative App Development.\n',
+    'On the following page, you will each find a card with your name on it- This will be your own personal playground within the app.\n',
+    'Use this to try out new things, share something you\'ve learned and display your skills.\nBe creative, '
+        'don\'t be afraid to ask questions, help others and have fun!'
   ]; //the text in the tile
 
   @override
@@ -36,9 +40,7 @@ class _MyNotePageState extends State<MyNotePage> {
                 children: <Widget>[
                   Text(
                     'Welcome!',
-                    style: isThemeCurrentlyDark(context)
-                        ? TitleStylesDefault.white
-                        : TitleStylesDefault.black,
+                    style: isThemeCurrentlyDark(context) ? TitleStylesDefault.white : TitleStylesDefault.black,
                   ),
                 ],
               ),
@@ -67,9 +69,21 @@ class _MyNotePageState extends State<MyNotePage> {
                             ),
                             Text(
                               itemContent[1],
-                              style: isThemeCurrentlyDark(context)
-                                  ? BodyStylesDefault.white
-                                  : BodyStylesDefault.black,
+                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                              textAlign: TextAlign.left,
+                              softWrap: true,
+                              overflow: TextOverflow.fade,
+                            ),
+                            Text(
+                              itemContent[2],
+                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                              textAlign: TextAlign.left,
+                              softWrap: true,
+                              overflow: TextOverflow.fade,
+                            ),
+                            Text(
+                              itemContent[3],
+                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
                               textAlign: TextAlign.left,
                               softWrap: true,
                               overflow: TextOverflow.fade,
