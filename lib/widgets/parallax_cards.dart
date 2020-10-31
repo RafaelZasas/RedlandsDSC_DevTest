@@ -1,4 +1,5 @@
 import 'package:dashboard_reborn/pages/gradients_page.dart';
+import 'package:dashboard_reborn/utils/colors.dart';
 import 'package:dashboard_reborn/utils/page_transformer.dart';
 import 'package:dashboard_reborn/utils/text_styles.dart';
 import 'package:dashboard_reborn/utils/ui_helpers.dart';
@@ -98,10 +99,10 @@ class ParallaxCards extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          // colors: [
-          //   Colors.transparent,
-          //   MyColors.black,
-          // ],
+          colors: [
+            Colors.transparent,
+            MyColors.black,
+          ],
         ),
       ),
     );
