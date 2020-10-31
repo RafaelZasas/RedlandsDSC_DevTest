@@ -9,6 +9,7 @@ import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gradient_widgets/gradient_widgets.dart';
 
 class RaffPage extends StatefulWidget {
   @override
@@ -20,10 +21,52 @@ class _RaffPageState extends State<RaffPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(25),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              //gradient colors change according to set theme
+              colors: isThemeCurrentlyDark(context)
+                  ? [GradientColors.darkStart, GradientColors.darkEnd]
+                  : [GradientColors.lightStart, GradientColors.lightEnd],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              tileMode: TileMode.clamp),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            // SECTION FOR NAVBAR
+            Padding(
+              padding: EdgeInsets.only(
+                left: 10.0,
+                top: 50.0,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  IconButton(
+                    icon: Icon(EvaIcons.arrowIosBack),
+                    tooltip: 'Go back',
+                    color: isThemeCurrentlyDark(context) ? MaterialColors.teal : MyColors.light,
+                    iconSize: 26.0,
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                  GradientText(
+                    "Dev Team's Cards",
+                    shaderRect: Rect.fromLTWH(0.0, 0.0, 50.0, 50.0),
+                    gradient: isThemeCurrentlyDark(context)
+                        ? Gradients.coldLinear
+                        : Gradients.haze, //gradient colors change according to set theme
+                    style: isThemeCurrentlyDark(context) ? TitleStylesDefault.white : TitleStylesDefault.black,
+                  ),
+                ],
+              ),
+            ),
+
+            // END NAVBAR SECTION
+
+            // START OF MAIN BODY
             Padding(
               padding: const EdgeInsets.only(
                 top: 10,
@@ -31,8 +74,8 @@ class _RaffPageState extends State<RaffPage> {
               ),
               child: Center(
                 child: Text(
-                  "Raffs Page",
-                  style: TextStyle(fontSize: 50),
+                  "Raff's Page",
+                  style: TextStyle(fontSize: 50, fontFamily: 'Open Sans'),
                 ),
               ),
             ),
@@ -55,6 +98,8 @@ class _RaffPageState extends State<RaffPage> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0), side: BorderSide(color: Colors.blue[100])),
                           child: Text(
                             "Gradients Page",
                             style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
@@ -71,6 +116,7 @@ class _RaffPageState extends State<RaffPage> {
                           },
                         ),
                         RaisedButton(
+                          shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
                           child: Text(
                             "Material Page",
                             style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
@@ -87,6 +133,8 @@ class _RaffPageState extends State<RaffPage> {
                           },
                         ),
                         RaisedButton(
+                          color: isThemeCurrentlyDark(context) ? MyColors.twitter : Colors.blue[900],
+                          splashColor: Colors.pinkAccent,
                           child: Text(
                             "About Page",
                             style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
@@ -121,7 +169,8 @@ class _RaffPageState extends State<RaffPage> {
             : Icon(
                 EvaIcons.moon,
                 size: 26.0,
-              ), //show moon icon when in light mode
+              ),
+        //show moon icon when in light mode
         tooltip: isThemeCurrentlyDark(context) ? 'Switch to light mode' : 'Switch to dark mode',
         foregroundColor: invertInvertColorsStrong(context),
         backgroundColor: invertInvertColorsTheme(context),
