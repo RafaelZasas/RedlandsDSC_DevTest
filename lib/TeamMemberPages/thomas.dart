@@ -14,8 +14,8 @@ class _TomPageState extends State<TomPage> {
         children: <Widget> [
           Center(
             child: Text(
-              "Tom's Page",
-              style: TextStyle(fontSize: 50),
+              "Thomas Reznik's Page",
+              style: TextStyle(fontSize: 20),
             ),
 
           ),
