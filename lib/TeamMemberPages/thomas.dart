@@ -62,7 +62,19 @@ class _TomPageState extends State<TomPage> {
                     duration: Duration(milliseconds: 750),
                     style: FlutterLogoStyle.markOnly,
                     curve: Curves.fastOutSlowIn,
-                  )
+                  ),
+                  TextFormField(
+                    decoration: const InputDecoration(
+                      hintText: 'Enter your email',
+                    ),
+                    validator: (value) {
+                      if (value.isEmpty) {
+                        return 'Please enter some text';
+                      }
+                      return null;
+                    },
+
+                  ),
                 ],
               ),
             ),
