@@ -23,7 +23,7 @@ class _AndrewPageState extends State<AndrewPage> {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            //gradient colors change according to set theme
+              //gradient colors change according to set theme
               colors: isThemeCurrentlyDark(context)
                   ? [GradientColors.darkStart, GradientColors.darkEnd]
                   : [GradientColors.lightStart, GradientColors.lightEnd],
@@ -31,8 +31,9 @@ class _AndrewPageState extends State<AndrewPage> {
               end: Alignment.bottomCenter,
               tileMode: TileMode.clamp),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: ListView(
+          // changed column to list view to allow for scrolling
+          // removed crossAxisAlignment: CrossAxisAlignment.center, because it doesn't work with list view
           children: <Widget>[
             // SECTION FOR NAVBAR
             Padding(
@@ -81,79 +82,77 @@ class _AndrewPageState extends State<AndrewPage> {
             ),
             Expanded(
                 child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Center(
-                          child: Image(image: AssetImage('assets/credits/urmil.png'))
-                      ),
-                    ),
-                    SexyTile(
-                      splashColor: MyColors.accent,
-                      child: Padding(
-                        padding: const EdgeInsets.all(25),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(18.0), side: BorderSide(color: Colors.blue[100])),
-                              child: Text(
-                                "Gradients Page",
-                                style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Center(child: Image(image: AssetImage('assets/credits/urmil.png'))),
+                ),
+                SexyTile(
+                  splashColor: MyColors.accent,
+                  child: Padding(
+                    padding: const EdgeInsets.all(25),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0), side: BorderSide(color: Colors.blue[100])),
+                          child: Text(
+                            "Gradients Page",
+                            style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) {
+                                  return MyGradientsPage();
+                                },
                               ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  CupertinoPageRoute(
-                                    builder: (context) {
-                                      return MyGradientsPage();
-                                    },
-                                  ),
-                                );
-                              },
-                            ),
-                            RaisedButton(
-                              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
-                              child: Text(
-                                "Material Page",
-                                style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  CupertinoPageRoute(
-                                    builder: (context) {
-                                      return MyMaterialPage();
-                                    },
-                                  ),
-                                );
-                              },
-                            ),
-                            RaisedButton(
-                              color: isThemeCurrentlyDark(context) ? MyColors.twitter : Colors.blue[900],
-                              splashColor: Colors.pinkAccent,
-                              child: Text(
-                                "About Page",
-                                style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  CupertinoPageRoute(
-                                    builder: (context) {
-                                      return MyAboutPage();
-                                    },
-                                  ),
-                                );
-                              },
-                            ),
-                          ],
+                            );
+                          },
                         ),
-                      ),
+                        RaisedButton(
+                          shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                          child: Text(
+                            "Material Page",
+                            style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) {
+                                  return MyMaterialPage();
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                        RaisedButton(
+                          color: isThemeCurrentlyDark(context) ? MyColors.twitter : Colors.blue[900],
+                          splashColor: Colors.pinkAccent,
+                          child: Text(
+                            "About Page",
+                            style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) {
+                                  return MyAboutPage();
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                      ],
                     ),
-                  ],
-                ))
+                  ),
+                ),
+              ],
+            ))
           ],
         ),
       ),
@@ -161,13 +160,13 @@ class _AndrewPageState extends State<AndrewPage> {
         heroTag: 'fab',
         child: isThemeCurrentlyDark(context)
             ? Icon(
-          EvaIcons.sun,
-          size: 30.0,
-        ) //show sun icon when in dark mode
+                EvaIcons.sun,
+                size: 30.0,
+              ) //show sun icon when in dark mode
             : Icon(
-          EvaIcons.moon,
-          size: 26.0,
-        ),
+                EvaIcons.moon,
+                size: 26.0,
+              ),
         //show moon icon when in light mode
         tooltip: isThemeCurrentlyDark(context) ? 'Switch to light mode' : 'Switch to dark mode',
         foregroundColor: invertInvertColorsStrong(context),
