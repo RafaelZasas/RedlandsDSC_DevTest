@@ -1,3 +1,5 @@
+import 'package:dashboard_reborn/TeamMemberPages/Raf/login.dart';
+import 'package:dashboard_reborn/TeamMemberPages/Raf/register.dart';
 import 'package:dashboard_reborn/pages/about_page.dart';
 import 'package:dashboard_reborn/pages/gradients_page.dart';
 import 'package:dashboard_reborn/pages/material_page.dart';
@@ -9,6 +11,7 @@ import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
 
 class RaffPage extends StatefulWidget {
@@ -32,13 +35,12 @@ class _RaffPageState extends State<RaffPage> {
               tileMode: TileMode.clamp),
         ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             // SECTION FOR NAVBAR
             Padding(
               padding: EdgeInsets.only(
                 left: 10.0,
-                top: 50.0,
+                top: 40,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -53,7 +55,7 @@ class _RaffPageState extends State<RaffPage> {
                     },
                   ),
                   GradientText(
-                    "Dev Team's Cards",
+                    "Dev Team",
                     shaderRect: Rect.fromLTWH(0.0, 0.0, 50.0, 50.0),
                     gradient: isThemeCurrentlyDark(context)
                         ? Gradients.coldLinear
@@ -67,29 +69,9 @@ class _RaffPageState extends State<RaffPage> {
             // END NAVBAR SECTION
 
             // START OF MAIN BODY
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 10,
-                bottom: 10,
-              ),
-              child: Center(
-                child: Text(
-                  "Raff's Page",
-                  style: TextStyle(fontSize: 50, fontFamily: 'Open Sans'),
-                ),
-              ),
-            ),
             Expanded(
                 child: Column(
               children: [
-                Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    "Some Examples provided by urmilshroff:",
-                    textAlign: TextAlign.center,
-                    style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
-                  ),
-                ),
                 SexyTile(
                   splashColor: MyColors.accent,
                   child: Padding(
@@ -97,6 +79,14 @@ class _RaffPageState extends State<RaffPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Text(
+                            "Some Examples provided by urmilshroff:",
+                            textAlign: TextAlign.center,
+                            style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                          ),
+                        ),
                         RaisedButton(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0), side: BorderSide(color: Colors.blue[100])),
@@ -154,6 +144,59 @@ class _RaffPageState extends State<RaffPage> {
                     ),
                   ),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center, //Center Row contents horizontally,
+                  children: [
+                    SexyTile(
+                      color: MyColors.primary,
+                      splashColor: Colors.pinkAccent,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 10.0, bottom: 10.0, left: 20.0, right: 20.0),
+                        child: Text(
+                          "Login",
+                          style: GoogleFonts.sacramento(
+                            color: isThemeCurrentlyDark(context) ? Colors.lightBlue : Colors.pinkAccent,
+                            fontSize: 46,
+                          ),
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) {
+                              return LoginPage();
+                            },
+                          ),
+                        );
+                      },
+                    ),
+                    SexyTile(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) {
+                              return RegisterPage();
+                            },
+                          ),
+                        );
+                      },
+                      color: MyColors.primary,
+                      splashColor: Colors.pinkAccent,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 10),
+                        child: Text(
+                          "Register",
+                          style: GoogleFonts.sacramento(
+                            color: isThemeCurrentlyDark(context) ? Colors.lightBlue : Colors.pinkAccent,
+                            fontSize: 46,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                )
               ],
             ))
           ],
