@@ -10,20 +10,48 @@ class _TomPageState extends State<TomPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: <Widget> [
-          Center(
-            child: Text(
-              "Thomas Reznik's Page",
-              style: TextStyle(fontSize: 20),
-            ),
+      body: Container(
 
-          ),
-          const RaisedButton(
-            onPressed: null,
-            child: Text('Disabled Button', style: TextStyle(fontSize: 20)),
-          ),
-        ],
+        child: Column(
+
+
+          children: <Widget> [
+            Row(
+             children: [
+               Padding(
+
+                 padding: const EdgeInsets.only(top: 20),
+                 child: Text(
+                   "Thomas Reznik's Page",
+                   style: TextStyle(fontSize: 20),
+                   textAlign: TextAlign.center,
+                 ),
+               ),
+             ],
+            ),
+             Center(
+               child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 crossAxisAlignment: CrossAxisAlignment.center,
+
+                 children: [
+                   RaisedButton(
+                     onPressed: null,
+                     child: Text('Disabled Button', style: TextStyle(fontSize: 20)),
+                   ),
+                   FlutterLogo(
+                     textColor: Colors.lightBlueAccent,
+                     duration: Duration(milliseconds: 750) ,
+                     style: FlutterLogoStyle.markOnly,
+                     curve: Curves.fastOutSlowIn,
+
+                   )
+                 ],
+               ),
+             ),
+
+          ],
+        ),
       ),
     );
   }
