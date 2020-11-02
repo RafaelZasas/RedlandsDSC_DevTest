@@ -1,3 +1,5 @@
+
+
 import 'package:dashboard_reborn/utils/colors.dart';
 import 'package:dashboard_reborn/utils/ui_helpers.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
@@ -13,38 +15,44 @@ class _TomPageState extends State<TomPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Container(
         child: Column(
           children: <Widget>[
+            AppBar(
+              title: Text("Thomas Reznik's Page"),
+              centerTitle: true,
+              backgroundColor: Colors.blueGrey,
+              elevation: 12.3,
+              iconTheme: IconThemeData(
+                color: Colors.pink, //change your color here
+              ),
+
+
+            ),
             Padding(
               // wrapped the "name" row with padding
               padding: EdgeInsets.only(
-                left: 10.0,
                 top: 50.0,
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  IconButton(
-                    // added a back button
-                    icon: Icon(EvaIcons.arrowIosBack),
-                    tooltip: 'Go back',
-                    color: isThemeCurrentlyDark(context) ? MaterialColors.teal : MyColors.light,
-                    iconSize: 26.0,
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                  Padding(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center, //Center Row contents horizontally,
+                  crossAxisAlignment: CrossAxisAlignment.center, //Center Row contents vertically,
                     // giving space between back button and name
-                    padding: EdgeInsets.only(left: 10),
-                    child: Text(
-                      "Thomas Reznik's Page",
-                      style: TextStyle(fontSize: 20),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ],
+                    children: [
+                      Text(
+                        "Enjoy My Home",
+                        style: TextStyle(fontSize: 20),
+                        textAlign: TextAlign.center,
+                      ),
+                      Padding(padding: EdgeInsets.all(30)),
+                      FadeInImage.assetNetwork(placeholder: 'assets/credits/test.gif',
+                        image: ('https://i.picsum.photos/id/129/4910/3252.jpg?hmac=g1KzJMIp75lG_scR48R1baC6TjhVmkEyygSyngKYRsg'),
+
+
+                      ),
+
+                    ],
               ),
             ),
             Expanded(
