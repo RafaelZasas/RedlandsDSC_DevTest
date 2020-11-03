@@ -10,6 +10,7 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class AndrewPage extends StatefulWidget {
   @override
@@ -17,6 +18,10 @@ class AndrewPage extends StatefulWidget {
 }
 
 class _AndrewPageState extends State<AndrewPage> {
+
+  var isLoading = false;
+  var btnText = ['start spinning', 'stop spinning'];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -151,6 +156,19 @@ class _AndrewPageState extends State<AndrewPage> {
                     ),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: RaisedButton(
+                    child: Text(isLoading ? btnText[1] : btnText[0]), // ternary. if loading true text = [1] else [0]
+                    onPressed: () {
+                      setState(() {
+                        // set state method only available to stateful widgets
+                        isLoading = !isLoading; // flip value of isLoading
+                      });
+                    },
+                  ),
+                ),
+                isLoading ? SpinKitCubeGrid(size: 100.0, color: Colors.green) : Container() // show spinner if loading
               ],
             ))
           ],
@@ -177,6 +195,7 @@ class _AndrewPageState extends State<AndrewPage> {
               .setBrightness(Theme.of(context).brightness == Brightness.dark ? Brightness.light : Brightness.dark);
         },
       ),
+
     );
   }
 }
