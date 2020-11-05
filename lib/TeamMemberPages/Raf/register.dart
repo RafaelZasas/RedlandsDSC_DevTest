@@ -1,6 +1,6 @@
-import 'package:dashboard_reborn/utils/colors.dart';
-import 'package:dashboard_reborn/utils/text_styles.dart';
-import 'package:dashboard_reborn/utils/ui_helpers.dart';
+import 'package:dsc_ur/utils/colors.dart';
+import 'package:dsc_ur/utils/text_styles.dart';
+import 'package:dsc_ur/utils/ui_helpers.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

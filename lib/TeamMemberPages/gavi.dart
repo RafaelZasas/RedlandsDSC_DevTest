@@ -1,6 +1,6 @@
-import 'package:dashboard_reborn/utils/colors.dart';
-import 'package:dashboard_reborn/utils/text_styles.dart';
-import 'package:dashboard_reborn/utils/ui_helpers.dart';
+import 'package:dsc_ur/utils/colors.dart';
+import 'package:dsc_ur/utils/text_styles.dart';
+import 'package:dsc_ur/utils/ui_helpers.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
@@ -51,7 +51,6 @@ class _GaviPageState extends State<GaviPage> {
             ),
 
             // END NAVBAR SECTION
-
           ],
         ),
       ),
@@ -59,13 +58,13 @@ class _GaviPageState extends State<GaviPage> {
         heroTag: 'fab',
         child: isThemeCurrentlyDark(context)
             ? Icon(
-          EvaIcons.sun,
-          size: 30.0,
-        ) //show sun icon when in dark mode
+                EvaIcons.sun,
+                size: 30.0,
+              ) //show sun icon when in dark mode
             : Icon(
-          EvaIcons.moon,
-          size: 26.0,
-        ),
+                EvaIcons.moon,
+                size: 26.0,
+              ),
         //show moon icon when in light mode
         tooltip: isThemeCurrentlyDark(context) ? 'Switch to light mode' : 'Switch to dark mode',
         foregroundColor: invertInvertColorsStrong(context),

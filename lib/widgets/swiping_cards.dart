@@ -1,8 +1,8 @@
 import 'dart:math';
 
-import 'package:dashboard_reborn/pages/gradients_page.dart';
-import 'package:dashboard_reborn/utils/text_styles.dart';
-import 'package:dashboard_reborn/utils/ui_helpers.dart';
+import 'package:dsc_ur/pages/gradients_page.dart';
+import 'package:dsc_ur/utils/text_styles.dart';
+import 'package:dsc_ur/utils/ui_helpers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
@@ -41,11 +41,7 @@ class SwipingCards extends StatelessWidget {
             var delta = i - currentPage;
             bool isOnRight = delta > 0;
 
-            var start = padding +
-                max(
-                    primaryCardLeft -
-                        horizontalInset * -delta * (isOnRight ? 15 : 1),
-                    0.0);
+            var start = padding + max(primaryCardLeft - horizontalInset * -delta * (isOnRight ? 15 : 1), 0.0);
 
             var cardItem = Positioned.directional(
               top: padding + verticalInset * max(-delta, 0.0),
@@ -75,8 +71,7 @@ class SwipingCards extends StatelessWidget {
                                   padding: EdgeInsets.all(20.0),
                                   child: GradientText(
                                     swipingCardTitles[i],
-                                    shaderRect:
-                                        Rect.fromLTWH(0.0, 0.0, 50.0, 50.0),
+                                    shaderRect: Rect.fromLTWH(0.0, 0.0, 50.0, 50.0),
                                     gradient: Gradients.haze,
                                     style: HeadingStylesGradient.white,
                                     softWrap: false,

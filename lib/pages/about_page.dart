@@ -1,7 +1,7 @@
-import 'package:dashboard_reborn/utils/colors.dart';
-import 'package:dashboard_reborn/utils/text_styles.dart';
-import 'package:dashboard_reborn/utils/ui_helpers.dart';
-import 'package:dashboard_reborn/widgets/sexy_tile.dart';
+import 'package:dsc_ur/utils/colors.dart';
+import 'package:dsc_ur/utils/text_styles.dart';
+import 'package:dsc_ur/utils/ui_helpers.dart';
+import 'package:dsc_ur/widgets/sexy_tile.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -48,9 +48,7 @@ class _MyAboutPageState extends State<MyAboutPage> {
                     color: Colors.transparent,
                     child: Text(
                       'About',
-                      style: isThemeCurrentlyDark(context)
-                          ? TitleStylesDefault.white
-                          : TitleStylesDefault.black,
+                      style: isThemeCurrentlyDark(context) ? TitleStylesDefault.white : TitleStylesDefault.black,
                     ),
                   ),
                 ],
@@ -95,9 +93,8 @@ class _MyAboutPageState extends State<MyAboutPage> {
                                 ),
                                 Text(
                                   'with',
-                                  style: isThemeCurrentlyDark(context)
-                                      ? BodyStylesDefault.white
-                                      : BodyStylesDefault.black,
+                                  style:
+                                      isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
                                 ),
                                 SizedBox(
                                   width: 6.0,
@@ -112,9 +109,8 @@ class _MyAboutPageState extends State<MyAboutPage> {
                                 ),
                                 Text(
                                   'by',
-                                  style: isThemeCurrentlyDark(context)
-                                      ? BodyStylesDefault.white
-                                      : BodyStylesDefault.black,
+                                  style:
+                                      isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
                                 ),
                               ],
                             ),
@@ -123,9 +119,7 @@ class _MyAboutPageState extends State<MyAboutPage> {
                             ),
                             Text(
                               'Urmil Shroff',
-                              style: isThemeCurrentlyDark(context)
-                                  ? LabelStyles.white
-                                  : LabelStyles.black,
+                              style: isThemeCurrentlyDark(context) ? LabelStyles.white : LabelStyles.black,
                               softWrap: true,
                               overflow: TextOverflow.fade,
                               maxLines: 1,
@@ -140,8 +134,7 @@ class _MyAboutPageState extends State<MyAboutPage> {
                                     color: invertColorsMild(context),
                                     size: 24.0,
                                   ),
-                                  onPressed: () =>
-                                      launchURL('https://urmilshroff.tech/'),
+                                  onPressed: () => launchURL('https://urmilshroff.tech/'),
                                 ),
                                 IconButton(
                                   icon: Icon(
@@ -149,8 +142,7 @@ class _MyAboutPageState extends State<MyAboutPage> {
                                     color: MyColors.twitter,
                                     size: 26.0,
                                   ),
-                                  onPressed: () => launchURL(
-                                      'https://twitter.com/urmilshroff'),
+                                  onPressed: () => launchURL('https://twitter.com/urmilshroff'),
                                 ),
                               ],
                             ),
@@ -179,9 +171,7 @@ class _MyAboutPageState extends State<MyAboutPage> {
                           ),
                           Text(
                             itemContent[1],
-                            style: isThemeCurrentlyDark(context)
-                                ? BodyStylesDefault.white
-                                : BodyStylesDefault.black,
+                            style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
                             textAlign: TextAlign.left,
                             softWrap: true,
                             overflow: TextOverflow.fade,
@@ -210,9 +200,7 @@ class _MyAboutPageState extends State<MyAboutPage> {
                           ),
                           Text(
                             itemContent[3],
-                            style: isThemeCurrentlyDark(context)
-                                ? BodyStylesDefault.white
-                                : BodyStylesDefault.black,
+                            style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
                             textAlign: TextAlign.left,
                             softWrap: true,
                             overflow: TextOverflow.fade,
@@ -242,8 +230,7 @@ class _MyAboutPageState extends State<MyAboutPage> {
         foregroundColor: invertInvertColorsStrong(context),
         backgroundColor: invertColorsStrong(context),
         elevation: 5.0,
-        onPressed: () =>
-            launchURL('https://github.com/urmilshroff/dashboard_reborn'),
+        onPressed: () => launchURL('https://github.com/urmilshroff/dashboard_reborn'),
       ),
     );
   }

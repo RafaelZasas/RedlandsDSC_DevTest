@@ -1,10 +1,10 @@
 import 'dart:ui';
 
-import 'package:dashboard_reborn/pages/liquid_page.dart';
-import 'package:dashboard_reborn/utils/colors.dart';
-import 'package:dashboard_reborn/utils/text_styles.dart';
-import 'package:dashboard_reborn/utils/ui_helpers.dart';
-import 'package:dashboard_reborn/widgets/sexy_bottom_sheet.dart';
+import 'package:dsc_ur/pages/liquid_page.dart';
+import 'package:dsc_ur/utils/colors.dart';
+import 'package:dsc_ur/utils/text_styles.dart';
+import 'package:dsc_ur/utils/ui_helpers.dart';
+import 'package:dsc_ur/widgets/sexy_bottom_sheet.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/cupertino.dart';
@@ -56,9 +56,8 @@ class _MyMaterialPageState extends State<MyMaterialPage> {
                             color: Colors.transparent,
                             child: Text(
                               'Material++',
-                              style: isThemeCurrentlyDark(context)
-                                  ? TitleStylesDefault.white
-                                  : TitleStylesDefault.black,
+                              style:
+                                  isThemeCurrentlyDark(context) ? TitleStylesDefault.white : TitleStylesDefault.black,
                             ),
                           ),
                         ),
@@ -105,26 +104,20 @@ class _MyMaterialPageState extends State<MyMaterialPage> {
                                         ),
                                       );
                                     },
-                                    transitionDuration:
-                                        Duration(milliseconds: 500),
-                                    pageBuilder: (BuildContext context,
-                                            Animation<double> animation,
-                                            Animation<double>
-                                                secondaryAnimation) =>
+                                    transitionDuration: Duration(milliseconds: 500),
+                                    pageBuilder: (BuildContext context, Animation<double> animation,
+                                            Animation<double> secondaryAnimation) =>
                                         Stack(
                                       children: <Widget>[
                                         Hero(
                                           tag: 'tile0',
                                           child: Container(
                                             child: Material(
-                                              color: invertInvertColorsMild(
-                                                  context),
+                                              color: invertInvertColorsMild(context),
                                               elevation: 5.0,
                                               shadowColor: shadowColor(context),
                                               child: InkWell(
-                                                splashColor:
-                                                    invertColorsMaterial(
-                                                        context),
+                                                splashColor: invertColorsMaterial(context),
                                                 child: null,
                                                 onTap: doNothing,
                                               ),

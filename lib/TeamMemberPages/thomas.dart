@@ -1,8 +1,3 @@
-
-
-import 'package:dashboard_reborn/utils/colors.dart';
-import 'package:dashboard_reborn/utils/ui_helpers.dart';
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +10,6 @@ class _TomPageState extends State<TomPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Container(
         child: Column(
           children: <Widget>[
@@ -27,8 +21,6 @@ class _TomPageState extends State<TomPage> {
               iconTheme: IconThemeData(
                 color: Colors.pink, //change your color here
               ),
-
-
             ),
             Padding(
               // wrapped the "name" row with padding
@@ -36,23 +28,22 @@ class _TomPageState extends State<TomPage> {
                 top: 50.0,
               ),
               child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center, //Center Row contents horizontally,
-                  crossAxisAlignment: CrossAxisAlignment.center, //Center Row contents vertically,
-                    // giving space between back button and name
-                    children: [
-                      Text(
-                        "Enjoy My Home",
-                        style: TextStyle(fontSize: 20),
-                        textAlign: TextAlign.center,
-                      ),
-                      Padding(padding: EdgeInsets.all(30)),
-                      FadeInImage.assetNetwork(placeholder: 'assets/credits/test.gif',
-                        image: ('https://i.picsum.photos/id/129/4910/3252.jpg?hmac=g1KzJMIp75lG_scR48R1baC6TjhVmkEyygSyngKYRsg'),
-
-
-                      ),
-
-                    ],
+                mainAxisAlignment: MainAxisAlignment.center, //Center Row contents horizontally,
+                crossAxisAlignment: CrossAxisAlignment.center, //Center Row contents vertically,
+                // giving space between back button and name
+                children: [
+                  Text(
+                    "Enjoy My Home",
+                    style: TextStyle(fontSize: 20),
+                    textAlign: TextAlign.center,
+                  ),
+                  Padding(padding: EdgeInsets.all(30)),
+                  FadeInImage.assetNetwork(
+                    placeholder: 'assets/credits/test.gif',
+                    image:
+                        ('https://i.picsum.photos/id/129/4910/3252.jpg?hmac=g1KzJMIp75lG_scR48R1baC6TjhVmkEyygSyngKYRsg'),
+                  ),
+                ],
               ),
             ),
             Expanded(
@@ -81,7 +72,6 @@ class _TomPageState extends State<TomPage> {
                       }
                       return null;
                     },
-
                   ),
                 ],
               ),

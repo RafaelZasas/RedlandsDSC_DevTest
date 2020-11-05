@@ -1,21 +1,21 @@
 // TEAM MEMBER PAGE IMPORTS
-import 'package:dashboard_reborn/TeamMemberPages/Melina.dart';
-import 'package:dashboard_reborn/TeamMemberPages/Raf/raff.dart';
-import 'package:dashboard_reborn/TeamMemberPages/andrew.dart';
-import 'package:dashboard_reborn/TeamMemberPages/anooj.dart';
-import 'package:dashboard_reborn/TeamMemberPages/gavi.dart';
-import 'package:dashboard_reborn/TeamMemberPages/justin.dart';
-import 'package:dashboard_reborn/TeamMemberPages/maggie.dart';
-import 'package:dashboard_reborn/TeamMemberPages/malachi.dart';
-import 'package:dashboard_reborn/TeamMemberPages/paetin.dart';
-import 'package:dashboard_reborn/TeamMemberPages/shlok.dart';
-import 'package:dashboard_reborn/TeamMemberPages/simmy.dart';
-import 'package:dashboard_reborn/TeamMemberPages/thomas.dart';
+import 'package:dsc_ur/TeamMemberPages/Melina.dart';
+import 'package:dsc_ur/TeamMemberPages/Raf/raff.dart';
+import 'package:dsc_ur/TeamMemberPages/andrew.dart';
+import 'package:dsc_ur/TeamMemberPages/anooj.dart';
+import 'package:dsc_ur/TeamMemberPages/gavi.dart';
+import 'package:dsc_ur/TeamMemberPages/justin.dart';
+import 'package:dsc_ur/TeamMemberPages/maggie.dart';
+import 'package:dsc_ur/TeamMemberPages/malachi.dart';
+import 'package:dsc_ur/TeamMemberPages/paetin.dart';
+import 'package:dsc_ur/TeamMemberPages/shlok.dart';
+import 'package:dsc_ur/TeamMemberPages/simmy.dart';
+import 'package:dsc_ur/TeamMemberPages/thomas.dart';
 // ORIGINAL REPO OWNERS IMPORTS
-import 'package:dashboard_reborn/utils/colors.dart';
-import 'package:dashboard_reborn/utils/text_styles.dart';
-import 'package:dashboard_reborn/utils/ui_helpers.dart';
-import 'package:dashboard_reborn/widgets/sexy_tile.dart';
+import 'package:dsc_ur/utils/colors.dart';
+import 'package:dsc_ur/utils/text_styles.dart';
+import 'package:dsc_ur/utils/ui_helpers.dart';
+import 'package:dsc_ur/widgets/sexy_tile.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
 // ICONS
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
