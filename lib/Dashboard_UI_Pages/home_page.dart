@@ -4,7 +4,6 @@ import 'package:dsc_ur/TeamMemberPages/Raf/raff.dart';
 import 'package:dsc_ur/TeamMemberPages/andrew.dart';
 import 'package:dsc_ur/TeamMemberPages/anooj.dart';
 import 'package:dsc_ur/TeamMemberPages/gavi.dart';
-import 'package:dsc_ur/TeamMemberPages/justin.dart';
 import 'package:dsc_ur/TeamMemberPages/maggie.dart';
 import 'package:dsc_ur/TeamMemberPages/malachi.dart';
 import 'package:dsc_ur/TeamMemberPages/paetin.dart';
@@ -22,6 +21,8 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 //STYLE GUIDELINE WIDGETS
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'file:///D:/Software%20Development/App%20Dev/Flutter/URedTest/lib/TeamMemberPages/Justin/justin.dart';
 
 //this page is based on https://github.com/Ivaskuu/dashboard
 
@@ -67,7 +68,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <Widget>[
                   Text(
                     'DSC UR',
-                    style: isThemeCurrentlyDark(context) ? TitleStylesDefault.white : TitleStylesDefault.black,
+                    style: isThemeCurrentlyDark(context)
+                        ? TitleStylesDefault.white
+                        : TitleStylesDefault.black,
                   ),
                 ],
               ),
@@ -102,7 +105,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                       color: Colors.transparent,
                                       child: Text(
                                         '${itemNames[index]}',
-                                        style: isThemeCurrentlyDark(context) ? LabelStyles.white : LabelStyles.black,
+                                        style: isThemeCurrentlyDark(context)
+                                            ? LabelStyles.white
+                                            : LabelStyles.black,
                                         softWrap: true,
                                         overflow: TextOverflow.fade,
                                         maxLines: 1,
@@ -179,8 +184,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: invertInvertColorsTheme(context),
         elevation: 5.0,
         onPressed: () {
-          DynamicTheme.of(context)
-              .setBrightness(Theme.of(context).brightness == Brightness.dark ? Brightness.light : Brightness.dark);
+          DynamicTheme.of(context).setBrightness(
+              Theme.of(context).brightness == Brightness.dark ? Brightness.light : Brightness.dark);
         },
       ),
     );

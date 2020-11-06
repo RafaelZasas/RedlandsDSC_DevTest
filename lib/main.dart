@@ -1,7 +1,8 @@
-import 'package:dsc_ur/pages/note_page.dart';
 import 'package:dsc_ur/utils/colors.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
+
+import 'Dashboard_UI_Pages/note_page.dart';
 
 void main() => runApp(MyApp());
 

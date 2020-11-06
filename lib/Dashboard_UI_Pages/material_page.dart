@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:dsc_ur/pages/liquid_page.dart';
 import 'package:dsc_ur/utils/colors.dart';
 import 'package:dsc_ur/utils/text_styles.dart';
 import 'package:dsc_ur/utils/ui_helpers.dart';
@@ -10,6 +9,8 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+
+import 'liquid_page.dart';
 
 class MyMaterialPage extends StatefulWidget {
   @override
@@ -56,8 +57,9 @@ class _MyMaterialPageState extends State<MyMaterialPage> {
                             color: Colors.transparent,
                             child: Text(
                               'Material++',
-                              style:
-                                  isThemeCurrentlyDark(context) ? TitleStylesDefault.white : TitleStylesDefault.black,
+                              style: isThemeCurrentlyDark(context)
+                                  ? TitleStylesDefault.white
+                                  : TitleStylesDefault.black,
                             ),
                           ),
                         ),

@@ -125,7 +125,9 @@ class _MyGradientsPageState extends State<MyGradientsPage> {
                       gradient: isThemeCurrentlyDark(context)
                           ? Gradients.coldLinear
                           : Gradients.haze, //gradient colors change according to set theme
-                      style: isThemeCurrentlyDark(context) ? TitleStylesDefault.white : TitleStylesDefault.black,
+                      style: isThemeCurrentlyDark(context)
+                          ? TitleStylesDefault.white
+                          : TitleStylesDefault.black,
                     ),
                   ],
                 ),

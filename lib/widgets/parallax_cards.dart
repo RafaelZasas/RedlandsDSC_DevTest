@@ -1,4 +1,4 @@
-import 'package:dsc_ur/pages/gradients_page.dart';
+import 'package:dsc_ur/Dashboard_UI_Pages/gradients_page.dart';
 import 'package:dsc_ur/utils/colors.dart';
 import 'package:dsc_ur/utils/page_transformer.dart';
 import 'package:dsc_ur/utils/text_styles.dart';

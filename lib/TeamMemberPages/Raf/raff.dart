@@ -1,10 +1,10 @@
+import 'package:dsc_ur/Dashboard_UI_Pages/about_page.dart';
+import 'package:dsc_ur/Dashboard_UI_Pages/gradients_page.dart';
+import 'package:dsc_ur/Dashboard_UI_Pages/material_page.dart';
 import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/Dog-Quotes/screens/doq_quotes_screen.dart';
 import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/Love-Calculator/screens/love_calculator_screen.dart';
-import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/Weather-App/screens/home_screen/home_screen.dart';
+import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/Weather-App/screens/home_screen/weather_app_screen.dart';
 import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/favorite-celebrities/favorite_celebrities_screen.dart';
-import 'package:dsc_ur/pages/about_page.dart';
-import 'package:dsc_ur/pages/gradients_page.dart';
-import 'package:dsc_ur/pages/material_page.dart';
 import 'package:dsc_ur/utils/colors.dart';
 import 'package:dsc_ur/utils/text_styles.dart';
 import 'package:dsc_ur/utils/ui_helpers.dart';

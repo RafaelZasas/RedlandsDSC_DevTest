@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:dsc_ur/pages/gradients_page.dart';
+import 'package:dsc_ur/Dashboard_UI_Pages/gradients_page.dart';
 import 'package:dsc_ur/utils/text_styles.dart';
 import 'package:dsc_ur/utils/ui_helpers.dart';
 import 'package:flutter/cupertino.dart';
@@ -41,7 +41,8 @@ class SwipingCards extends StatelessWidget {
             var delta = i - currentPage;
             bool isOnRight = delta > 0;
 
-            var start = padding + max(primaryCardLeft - horizontalInset * -delta * (isOnRight ? 15 : 1), 0.0);
+            var start = padding +
+                max(primaryCardLeft - horizontalInset * -delta * (isOnRight ? 15 : 1), 0.0);
 
             var cardItem = Positioned.directional(
               top: padding + verticalInset * max(-delta, 0.0),
