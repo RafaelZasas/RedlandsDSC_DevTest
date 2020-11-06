@@ -13,6 +13,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
 
+import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/Dog-Quotes/screens/doq_quotes_screen.dart';
+import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/Love-Calculator/screens/love_calculator_screen.dart';
+import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/Weather-App/screens/home_screen/weather_app_screen.dart';
+import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/favorite-celebrities/favorite_celebrities_screen.dart';
+
 class AndrewPage extends StatefulWidget {
   @override
   _AndrewPageState createState() => _AndrewPageState();
@@ -101,16 +106,6 @@ class _AndrewPageState extends State<AndrewPage> {
             Expanded(
                 child: Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Center(
-                    child: Image(
-                      image: AssetImage('assets/credits/andrew_avatar.png'),
-                      height: 400.0,
-                      width: 300.0,
-                    ),
-                  ),
-                ),
                 CircleAvatar(
                   backgroundImage: AssetImage('assets/credits/andrew_avatar.png'),
                   radius: 150,
@@ -179,6 +174,116 @@ class _AndrewPageState extends State<AndrewPage> {
                               CupertinoPageRoute(
                                 builder: (context) {
                                   return MyAboutPage();
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: 10,
+                    bottom: 10,
+                  ),
+                  child: Center(
+                    child: Text(
+                      "rohan app demos",
+                      style: TextStyle(fontSize: 25, fontFamily: 'Courier New', color: Colors.black, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                SexyTile(
+                  splashColor: MyColors.accent,
+                  child: Padding(
+                    padding: const EdgeInsets.all(25),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+
+                        RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(color: Colors.blue[100])),
+                          child: Text(
+                            "favorite celebs",
+                            style: isThemeCurrentlyDark(context)
+                                ? BodyStylesDefault.white
+                                : BodyStylesDefault.black,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) {
+                                  return FavoriteCelebritiesScreen();
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                        RaisedButton(
+                          shape:
+                          RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                          child: Text(
+                            "love calculator",
+                            style: isThemeCurrentlyDark(context)
+                                ? BodyStylesDefault.white
+                                : BodyStylesDefault.black,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) {
+                                  return LoveCalculatorScreen();
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                        RaisedButton(
+                          color:
+                          isThemeCurrentlyDark(context) ? MyColors.twitter : Colors.blue[900],
+                          splashColor: Colors.pinkAccent,
+                          child: Text(
+                            "dog quotes",
+                            style: isThemeCurrentlyDark(context)
+                                ? BodyStylesDefault.white
+                                : BodyStylesDefault.black,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) {
+                                  return DogQuotesScreen();
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                        RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(color: Colors.blue[100])),
+                          splashColor: Colors.pinkAccent,
+                          child: Text(
+                            "Weather App",
+                            style: isThemeCurrentlyDark(context)
+                                ? BodyStylesDefault.white
+                                : BodyStylesDefault.black,
+                          ),
+                          onPressed: () {
+                            // set the theme to light when you enter the weather app
+                            DynamicTheme.of(context).setBrightness(Brightness.light);
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) {
+                                  return WeatherAppScreen();
                                 },
                               ),
                             );

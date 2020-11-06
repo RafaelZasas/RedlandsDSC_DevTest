@@ -2,7 +2,7 @@
 import 'package:dsc_ur/TeamMemberPages/Melina.dart';
 import 'package:dsc_ur/TeamMemberPages/Raf/raff.dart';
 import 'package:dsc_ur/TeamMemberPages/Justin/justin.dart';
-import 'package:dsc_ur/TeamMemberPages/andrew.dart';
+import 'package:dsc_ur/TeamMemberPages/Andrew/andrew.dart';
 import 'package:dsc_ur/TeamMemberPages/anooj.dart';
 import 'package:dsc_ur/TeamMemberPages/gavi.dart';
 import 'package:dsc_ur/TeamMemberPages/maggie.dart';
