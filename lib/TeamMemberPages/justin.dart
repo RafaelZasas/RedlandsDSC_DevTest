@@ -6,6 +6,8 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
+import 'package:dashboard_reborn/pages/justinalbum_page.dart';
+
 
 class JustinPage extends StatefulWidget {
   @override
@@ -52,18 +54,40 @@ class _JustinPageState extends State<JustinPage> {
             // END NAVBAR SECTION
 
             Expanded(
-                child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Center(
-                    child: Image(
-                      image: AssetImage('assets/credits/justin_avatar.png'),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Center(
+                      child: Image(
+                        image: AssetImage('assets/credits/justin_avatar.png'),
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ))
+                  RaisedButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                        side: BorderSide(color: Colors.blue[100])),
+                    child: Text(
+                      "Some Tunes",
+                      style: isThemeCurrentlyDark(context)
+                          ? BodyStylesDefault.white
+                          : BodyStylesDefault.black,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) {
+                            return JustinAlbums();
+                          },
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
