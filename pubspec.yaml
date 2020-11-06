@@ -42,6 +42,8 @@ flutter:
      - assets/flare/
      - assets/icon/
      - assets/music/
+     - assets/images/
+
 
   fonts:
     - family: Rubik

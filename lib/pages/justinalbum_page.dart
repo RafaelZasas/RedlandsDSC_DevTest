@@ -1,13 +1,12 @@
-import 'package:dashboard_reborn/utils/colors.dart';
-import 'package:dashboard_reborn/utils/text_styles.dart';
-import 'package:dashboard_reborn/utils/ui_helpers.dart';
-import 'package:dashboard_reborn/widgets/swiping_cards.dart';
+import 'package:dsc_ur/utils/colors.dart';
+import 'package:dsc_ur/utils/text_styles.dart';
+import 'package:dsc_ur/utils/ui_helpers.dart';
+import 'package:dsc_ur/widgets/swiping_cards.dart';
+import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
-import 'package:dynamic_theme/dynamic_theme.dart';
-
 
 List<String> swipingCardImages = [
   'assets/music/Kaleo_album.jpg',
@@ -26,7 +25,6 @@ List<String> swipingCardTitles = [
   'Smoke+Mirrors',
   'Hollywood\'s Bleeding',
 ];
-
 
 var cardAspectRatio = 12.0 / 16.0;
 var widgetAspectRatio = cardAspectRatio * 1.2;
@@ -120,13 +118,13 @@ class _JustinAlbumsState extends State<JustinAlbums> {
         heroTag: 'fab',
         child: isThemeCurrentlyDark(context)
             ? Icon(
-          EvaIcons.sun,
-          size: 30.0,
-        ) //show sun icon when in dark mode
+                EvaIcons.sun,
+                size: 30.0,
+              ) //show sun icon when in dark mode
             : Icon(
-          EvaIcons.moon,
-          size: 26.0,
-        ),
+                EvaIcons.moon,
+                size: 26.0,
+              ),
         //show moon icon when in light mode
         tooltip: isThemeCurrentlyDark(context)
             ? 'Switch to light mode'

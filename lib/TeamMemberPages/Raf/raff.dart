@@ -1,8 +1,7 @@
 import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/Dog-Quotes/screens/doq_quotes_screen.dart';
 import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/Love-Calculator/screens/love_calculator_screen.dart';
+import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/Weather-App/screens/home_screen/home_screen.dart';
 import 'package:dsc_ur/TeamMemberPages/Raf/Rohan-Apps/favorite-celebrities/favorite_celebrities_screen.dart';
-import 'package:dsc_ur/TeamMemberPages/Raf/login.dart';
-import 'package:dsc_ur/TeamMemberPages/Raf/register.dart';
 import 'package:dsc_ur/pages/about_page.dart';
 import 'package:dsc_ur/pages/gradients_page.dart';
 import 'package:dsc_ur/pages/material_page.dart';
@@ -16,6 +15,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
+
+import 'components/auth/login.dart';
+import 'components/auth/register.dart';
 
 class RaffPage extends StatefulWidget {
   @override
@@ -50,7 +52,8 @@ class _RaffPageState extends State<RaffPage> {
               ),
               child: Row(
                 // padding takes one child: in this case a row
-                mainAxisAlignment: MainAxisAlignment.start, // things should be aligned to the start of the row ie. left
+                mainAxisAlignment: MainAxisAlignment
+                    .start, // things should be aligned to the start of the row ie. left
                 children: <Widget>[
                   // row has multiple children
                   IconButton(
@@ -68,7 +71,9 @@ class _RaffPageState extends State<RaffPage> {
                     gradient: isThemeCurrentlyDark(context)
                         ? Gradients.coldLinear
                         : Gradients.haze, //gradient colors change according to set theme
-                    style: isThemeCurrentlyDark(context) ? TitleStylesDefault.white : TitleStylesDefault.black,
+                    style: isThemeCurrentlyDark(context)
+                        ? TitleStylesDefault.white
+                        : TitleStylesDefault.black,
                   ),
                 ],
               ),
@@ -94,15 +99,20 @@ class _RaffPageState extends State<RaffPage> {
                             child: Text(
                               "Some Examples provided by urmilshroff:",
                               textAlign: TextAlign.center,
-                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                              style: isThemeCurrentlyDark(context)
+                                  ? BodyStylesDefault.white
+                                  : BodyStylesDefault.black,
                             ),
                           ),
                           RaisedButton(
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0), side: BorderSide(color: Colors.blue[100])),
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(color: Colors.blue[100])),
                             child: Text(
                               "Gradients Page",
-                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                              style: isThemeCurrentlyDark(context)
+                                  ? BodyStylesDefault.white
+                                  : BodyStylesDefault.black,
                             ),
                             onPressed: () {
                               Navigator.push(
@@ -116,10 +126,13 @@ class _RaffPageState extends State<RaffPage> {
                             },
                           ),
                           RaisedButton(
-                            shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(30.0)),
                             child: Text(
                               "Material Page",
-                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                              style: isThemeCurrentlyDark(context)
+                                  ? BodyStylesDefault.white
+                                  : BodyStylesDefault.black,
                             ),
                             onPressed: () {
                               Navigator.push(
@@ -133,11 +146,14 @@ class _RaffPageState extends State<RaffPage> {
                             },
                           ),
                           RaisedButton(
-                            color: isThemeCurrentlyDark(context) ? MyColors.twitter : Colors.blue[900],
+                            color:
+                                isThemeCurrentlyDark(context) ? MyColors.twitter : Colors.blue[900],
                             splashColor: Colors.pinkAccent,
                             child: Text(
                               "About Page",
-                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                              style: isThemeCurrentlyDark(context)
+                                  ? BodyStylesDefault.white
+                                  : BodyStylesDefault.black,
                             ),
                             onPressed: () {
                               Navigator.push(
@@ -167,15 +183,20 @@ class _RaffPageState extends State<RaffPage> {
                             child: Text(
                               "Rohan's Flutter series apps:",
                               textAlign: TextAlign.center,
-                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                              style: isThemeCurrentlyDark(context)
+                                  ? BodyStylesDefault.white
+                                  : BodyStylesDefault.black,
                             ),
                           ),
                           RaisedButton(
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0), side: BorderSide(color: Colors.blue[100])),
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(color: Colors.blue[100])),
                             child: Text(
                               "Favourite Celebrities",
-                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                              style: isThemeCurrentlyDark(context)
+                                  ? BodyStylesDefault.white
+                                  : BodyStylesDefault.black,
                             ),
                             onPressed: () {
                               Navigator.push(
@@ -190,10 +211,13 @@ class _RaffPageState extends State<RaffPage> {
                           ),
                           RaisedButton(
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0), side: BorderSide(color: Colors.blue[100])),
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(color: Colors.blue[100])),
                             child: Text(
                               "Love Calculator",
-                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                              style: isThemeCurrentlyDark(context)
+                                  ? BodyStylesDefault.white
+                                  : BodyStylesDefault.black,
                             ),
                             onPressed: () {
                               Navigator.push(
@@ -208,11 +232,14 @@ class _RaffPageState extends State<RaffPage> {
                           ),
                           RaisedButton(
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0), side: BorderSide(color: Colors.blue[100])),
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(color: Colors.blue[100])),
                             splashColor: Colors.pinkAccent,
                             child: Text(
                               "Dog Quotes",
-                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                              style: isThemeCurrentlyDark(context)
+                                  ? BodyStylesDefault.white
+                                  : BodyStylesDefault.black,
                             ),
                             onPressed: () {
                               Navigator.push(
@@ -227,11 +254,14 @@ class _RaffPageState extends State<RaffPage> {
                           ),
                           RaisedButton(
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0), side: BorderSide(color: Colors.blue[100])),
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(color: Colors.blue[100])),
                             splashColor: Colors.pinkAccent,
                             child: Text(
                               "Currency Exchanger",
-                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                              style: isThemeCurrentlyDark(context)
+                                  ? BodyStylesDefault.white
+                                  : BodyStylesDefault.black,
                             ),
                             onPressed: () {
                               Navigator.push(
@@ -257,29 +287,23 @@ class _RaffPageState extends State<RaffPage> {
                           ),
                           RaisedButton(
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0), side: BorderSide(color: Colors.blue[100])),
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(color: Colors.blue[100])),
                             splashColor: Colors.pinkAccent,
                             child: Text(
                               "Weather App",
-                              style: isThemeCurrentlyDark(context) ? BodyStylesDefault.white : BodyStylesDefault.black,
+                              style: isThemeCurrentlyDark(context)
+                                  ? BodyStylesDefault.white
+                                  : BodyStylesDefault.black,
                             ),
                             onPressed: () {
+                              // set the theme to light when you enter the weather app
+                              DynamicTheme.of(context).setBrightness(Brightness.light);
                               Navigator.push(
                                 context,
                                 CupertinoPageRoute(
                                   builder: (context) {
-                                    return AlertDialog(
-                                      title: Text("woah there bud"),
-                                      content: Text("I still need to add this one."),
-                                      actions: [
-                                        FlatButton(
-                                          child: Text("OK"),
-                                          onPressed: () {
-                                            Navigator.pop(context);
-                                          },
-                                        ),
-                                      ],
-                                    );
+                                    return WeatherAppScreen();
                                   },
                                 ),
                               );
@@ -296,11 +320,14 @@ class _RaffPageState extends State<RaffPage> {
                         color: MyColors.primary,
                         splashColor: Colors.pinkAccent,
                         child: Padding(
-                          padding: EdgeInsets.only(top: 10.0, bottom: 10.0, left: 20.0, right: 20.0),
+                          padding:
+                              EdgeInsets.only(top: 10.0, bottom: 10.0, left: 20.0, right: 20.0),
                           child: Text(
                             "Login",
                             style: GoogleFonts.sacramento(
-                              color: isThemeCurrentlyDark(context) ? Colors.lightBlue : Colors.pinkAccent,
+                              color: isThemeCurrentlyDark(context)
+                                  ? Colors.lightBlue
+                                  : Colors.pinkAccent,
                               fontSize: 46,
                             ),
                           ),
@@ -334,7 +361,9 @@ class _RaffPageState extends State<RaffPage> {
                           child: Text(
                             "Register",
                             style: GoogleFonts.sacramento(
-                              color: isThemeCurrentlyDark(context) ? Colors.lightBlue : Colors.pinkAccent,
+                              color: isThemeCurrentlyDark(context)
+                                  ? Colors.lightBlue
+                                  : Colors.pinkAccent,
                               fontSize: 46,
                             ),
                           ),
@@ -365,8 +394,8 @@ class _RaffPageState extends State<RaffPage> {
         backgroundColor: invertInvertColorsTheme(context),
         elevation: 5.0,
         onPressed: () {
-          DynamicTheme.of(context)
-              .setBrightness(Theme.of(context).brightness == Brightness.dark ? Brightness.light : Brightness.dark);
+          DynamicTheme.of(context).setBrightness(
+              Theme.of(context).brightness == Brightness.dark ? Brightness.light : Brightness.dark);
         },
       ),
     );

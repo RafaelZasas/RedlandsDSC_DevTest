@@ -1,3 +1,4 @@
+import 'package:dsc_ur/pages/justinalbum_page.dart';
 import 'package:dsc_ur/utils/colors.dart';
 import 'package:dsc_ur/utils/text_styles.dart';
 import 'package:dsc_ur/utils/ui_helpers.dart';
@@ -6,8 +7,6 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
-import 'package:dashboard_reborn/pages/justinalbum_page.dart';
-
 
 class JustinPage extends StatefulWidget {
   @override
@@ -34,7 +33,9 @@ class _JustinPageState extends State<JustinPage> {
                   IconButton(
                     icon: Icon(EvaIcons.arrowIosBack),
                     tooltip: 'Go back',
-                    color: isThemeCurrentlyDark(context) ? MaterialColors.teal : MyColors.light,
+                    color: isThemeCurrentlyDark(context)
+                        ? MaterialColors.teal
+                        : MyColors.light,
                     iconSize: 26.0,
                     onPressed: () {
                       Navigator.pop(context);
@@ -43,9 +44,13 @@ class _JustinPageState extends State<JustinPage> {
                   GradientText(
                     "Justin's Card",
                     shaderRect: Rect.fromLTWH(0.0, 0.0, 50.0, 50.0),
-                    gradient: isThemeCurrentlyDark(context) ? Gradients.backToFuture : Gradients.taitanum,
+                    gradient: isThemeCurrentlyDark(context)
+                        ? Gradients.backToFuture
+                        : Gradients.taitanum,
                     //gradient colors change according to set theme
-                    style: isThemeCurrentlyDark(context) ? TitleStylesDefault.white : TitleStylesDefault.black,
+                    style: isThemeCurrentlyDark(context)
+                        ? TitleStylesDefault.white
+                        : TitleStylesDefault.black,
                   ),
                 ],
               ),
@@ -103,13 +108,17 @@ class _JustinPageState extends State<JustinPage> {
                 size: 26.0,
               ),
         //show moon icon when in light mode
-        tooltip: isThemeCurrentlyDark(context) ? 'Switch to light mode' : 'Switch to dark mode',
+        tooltip: isThemeCurrentlyDark(context)
+            ? 'Switch to light mode'
+            : 'Switch to dark mode',
         foregroundColor: invertInvertColorsStrong(context),
         backgroundColor: invertInvertColorsTheme(context),
         elevation: 5.0,
         onPressed: () {
-          DynamicTheme.of(context)
-              .setBrightness(Theme.of(context).brightness == Brightness.dark ? Brightness.light : Brightness.dark);
+          DynamicTheme.of(context).setBrightness(
+              Theme.of(context).brightness == Brightness.dark
+                  ? Brightness.light
+                  : Brightness.dark);
         },
       ),
     );
