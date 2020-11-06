@@ -1,6 +1,7 @@
 // TEAM MEMBER PAGE IMPORTS
 import 'package:dsc_ur/TeamMemberPages/Melina.dart';
 import 'package:dsc_ur/TeamMemberPages/Raf/raff.dart';
+import 'package:dsc_ur/TeamMemberPages/Justin/justin.dart';
 import 'package:dsc_ur/TeamMemberPages/andrew.dart';
 import 'package:dsc_ur/TeamMemberPages/anooj.dart';
 import 'package:dsc_ur/TeamMemberPages/gavi.dart';
@@ -21,8 +22,6 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 //STYLE GUIDELINE WIDGETS
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'file:///D:/Software%20Development/App%20Dev/Flutter/URedTest/lib/TeamMemberPages/Justin/justin.dart';
 
 //this page is based on https://github.com/Ivaskuu/dashboard
 

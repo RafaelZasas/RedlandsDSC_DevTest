@@ -1,12 +1,12 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=C:\Users\Raf\flutter"
-export "FLUTTER_APPLICATION_PATH=D:\Software Development\App Dev\Flutter\URedTest"
+export "FLUTTER_ROOT=C:\src\flutter_windows_1.22.2-stable\flutter"
+export "FLUTTER_APPLICATION_PATH=C:\Users\jtcha\AndroidStudioProjects\RedlandsDSC_DevTest"
 export "FLUTTER_TARGET=lib\main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "SYMROOT=${SOURCE_ROOT}/../build\ios"
 export "OTHER_LDFLAGS=$(inherited) -framework Flutter"
-export "FLUTTER_FRAMEWORK_DIR=C:\Users\Raf\flutter\bin\cache\artifacts\engine\ios"
+export "FLUTTER_FRAMEWORK_DIR=C:\src\flutter_windows_1.22.2-stable\flutter\bin\cache\artifacts\engine\ios"
 export "FLUTTER_BUILD_NAME=1.1.1"
 export "FLUTTER_BUILD_NUMBER=5"
 export "DART_OBFUSCATION=false"

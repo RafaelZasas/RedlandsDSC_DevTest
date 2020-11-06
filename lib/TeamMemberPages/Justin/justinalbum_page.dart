@@ -1,7 +1,7 @@
 import 'package:dsc_ur/utils/colors.dart';
 import 'package:dsc_ur/utils/text_styles.dart';
 import 'package:dsc_ur/utils/ui_helpers.dart';
-import 'package:dsc_ur/widgets/swiping_cards.dart';
+import 'package:dsc_ur/TeamMemberPages/Justin/justin_swiping_cards.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
@@ -9,12 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
 
 List<String> swipingCardImages = [
-  'assets/music/Kaleo_album.jpg',
-  'assets/music/justin_music/MISSIO_album.jpg',
-  'assets/music/justin_music/Rage_album.jpg',
-  'assets/music/justin_music/RHCP_album.jpg',
-  'assets/music/justin_music/Imagine_album.jpg',
-  'assets/music/justin_music/Post_album.jpg',
+  'assets/music/Kaleo_album.png',
+  'assets/music/MISSIO_album.jpg',
+  'assets/music/Rage_Album.jpg',
+  'assets/music/RHCP_album.jpg',
+  'assets/music/Imagine_album.jpg',
+  'assets/music/Post_album.jpg',
 ];
 
 List<String> swipingCardTitles = [
