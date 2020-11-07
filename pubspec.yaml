@@ -23,15 +23,29 @@ dependencies:
   url_launcher: ^5.5.0
   cached_network_image: ^2.3.3
   carousel_slider: ^2.3.1
+
   # Firebase
   firebase_core: ^0.5.2  # Firebase Core Flutter SDK
-  firebase_analytics: ^6.2.0  # FlutterFire plugin for Google Analytics
+
+  # FlutterFire plugin for Google Analytics
+  firebase_analytics: ^6.2.0
+
+  #user auth
   firebase_auth: ^0.18.3 # Firebase Authentication
-  cloud_firestore: ^0.14.3  # Cloud Firestore
-  cloud_functions: ^0.7.0+1 # Cloud Functions
-  firebase_crashlytics: ^0.2.3 # Firebase Crashlytics
-  firebase_performance: ^0.4.2  # Firebase-App Performance Monitoring
-  firebase_in_app_messaging: ^0.2.2 # Firebase in-app messaging
+  google_sign_in: ^4.5.1
+
+  # Database
+  cloud_firestore: ^0.14.3
+
+  # Cloud Functions
+  cloud_functions: ^0.7.0+1
+
+  # Firebase Crashlytics
+  firebase_crashlytics: ^0.2.3
+
+  # Firebase-App Performance Monitoring
+  firebase_performance: ^0.4.2
+
 
 
 dev_dependencies:
