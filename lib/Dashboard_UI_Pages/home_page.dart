@@ -6,7 +6,7 @@ import 'package:dsc_ur/TeamMemberPages/Justin/justin.dart';
 import 'package:dsc_ur/TeamMemberPages/Andrew/andrew.dart';
 import 'package:dsc_ur/TeamMemberPages/anooj.dart';
 import 'package:dsc_ur/TeamMemberPages/gavi.dart';
-import 'package:dsc_ur/TeamMemberPages/maggie.dart';
+import 'file:///C:/Users/Maggie/AndroidStudioProjects/RedlandsDSC_DevTest/lib/TeamMemberPages/Maggie/maggie.dart';
 import 'package:dsc_ur/TeamMemberPages/malachi.dart';
 import 'package:dsc_ur/TeamMemberPages/paetin.dart';
 import 'package:dsc_ur/TeamMemberPages/shlok.dart';

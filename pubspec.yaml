@@ -20,7 +20,7 @@ dependencies:
   liquid_swipe: ^1.5.0
   google_fonts: ^1.1.1
   # Functionality
-  url_launcher: ^5.5.0
+  url_launcher: ^5.7.10
   cached_network_image: ^2.3.3
   carousel_slider: ^2.3.1
 
@@ -92,3 +92,11 @@ flutter:
         - asset: assets/fonts/Quicksand/Quicksand-Regular.ttf
         - asset: assets/fonts/Quicksand/Quicksand-Medium.ttf
         - asset: assets/fonts/Quicksand/Quicksand-Bold.ttf
+
+    - family: Satisfy
+      fonts:
+        - asset: assets/fonts/Satisfy-Regular.ttf
+
+    - family: Open Sans
+      fonts:
+        - asset: assets/fonts/OpenSans-Regular.ttf
