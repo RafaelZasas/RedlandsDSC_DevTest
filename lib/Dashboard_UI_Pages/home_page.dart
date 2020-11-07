@@ -1,4 +1,5 @@
 // TEAM MEMBER PAGE IMPORTS
+import 'package:dsc_ur/TeamMemberPages/Kimmy/kimmy.dart';
 import 'package:dsc_ur/TeamMemberPages/Melina.dart';
 import 'package:dsc_ur/TeamMemberPages/Raf/raff.dart';
 import 'package:dsc_ur/TeamMemberPages/Justin/justin.dart';
@@ -46,7 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
       'Shlok',
       'Thomas',
       'Melina',
-      'Anooj'
+      'Anooj',
+      'Kimmy'
     ]; //name of each individual tile
 
     return Scaffold(
@@ -146,6 +148,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                         return MelinaPage();
                                       } else if (index == 11) {
                                         return AnoojPage();
+                                      } else if (index == 12) {
+                                        return KimmyPage();
                                       }
                                       {
                                         return null;
