@@ -65,7 +65,7 @@ class _AndrewPageState extends State<AndrewPage> {
                     },
                   ),
                   GradientText(
-                    "Dev Team's Cards",
+                    "back to all developers",
                     shaderRect: Rect.fromLTWH(0.0, 0.0, 50.0, 50.0),
                     gradient: isThemeCurrentlyDark(context) ? Gradients.coldLinear : Gradients.haze,
                     //gradient colors change according to set theme
@@ -88,19 +88,19 @@ class _AndrewPageState extends State<AndrewPage> {
               child: Center(
                 child: Text(
                   "andrew yip",
-                  style: TextStyle(fontSize: 50, fontFamily: 'Courier New', color: Colors.green),
+                  style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold, fontFamily: 'Courier New', color: Colors.green),
                 ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(
                 top: 0,
-                bottom: 0,
+                bottom: 10,
               ),
               child: Center(
                 child: Text(
                   "software engineer",
-                  style: TextStyle(fontSize: 50, fontFamily: 'Courier New', color: Colors.green),
+                  style: TextStyle(fontSize: 36, fontFamily: 'Courier New', color: Colors.green, fontWeight: FontWeight.w900),
                 ),
               ),
             ),
@@ -197,19 +197,29 @@ class _AndrewPageState extends State<AndrewPage> {
                   ),
                 ),
                 SexyTile(
+                  // second sexy tile for Rohan's examaples
                   splashColor: MyColors.accent,
                   child: Padding(
                     padding: const EdgeInsets.all(25),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Text(
+                            "Rohan's Flutter series apps:",
+                            textAlign: TextAlign.center,
+                            style: isThemeCurrentlyDark(context)
+                                ? BodyStylesDefault.white
+                                : BodyStylesDefault.black,
+                          ),
+                        ),
                         RaisedButton(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
                               side: BorderSide(color: Colors.blue[100])),
                           child: Text(
-                            "favorite celebs",
+                            "Favourite Celebrities",
                             style: isThemeCurrentlyDark(context)
                                 ? BodyStylesDefault.white
                                 : BodyStylesDefault.black,
@@ -226,10 +236,11 @@ class _AndrewPageState extends State<AndrewPage> {
                           },
                         ),
                         RaisedButton(
-                          shape:
-                          RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(color: Colors.blue[100])),
                           child: Text(
-                            "love calculator",
+                            "Love Calculator",
                             style: isThemeCurrentlyDark(context)
                                 ? BodyStylesDefault.white
                                 : BodyStylesDefault.black,
@@ -246,11 +257,12 @@ class _AndrewPageState extends State<AndrewPage> {
                           },
                         ),
                         RaisedButton(
-                          color:
-                          isThemeCurrentlyDark(context) ? MyColors.twitter : Colors.blue[900],
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(color: Colors.blue[100])),
                           splashColor: Colors.pinkAccent,
                           child: Text(
-                            "dog quotes",
+                            "Dog Quotes",
                             style: isThemeCurrentlyDark(context)
                                 ? BodyStylesDefault.white
                                 : BodyStylesDefault.black,
@@ -261,6 +273,39 @@ class _AndrewPageState extends State<AndrewPage> {
                               CupertinoPageRoute(
                                 builder: (context) {
                                   return DogQuotesScreen();
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                        RaisedButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                              side: BorderSide(color: Colors.blue[100])),
+                          splashColor: Colors.pinkAccent,
+                          child: Text(
+                            "Currency Exchanger",
+                            style: isThemeCurrentlyDark(context)
+                                ? BodyStylesDefault.white
+                                : BodyStylesDefault.black,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) {
+                                  return AlertDialog(
+                                    title: Text("woah there bud"),
+                                    content: Text("I still need to add this one."),
+                                    actions: [
+                                      FlatButton(
+                                        child: Text("OK"),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                      ),
+                                    ],
+                                  );
                                 },
                               ),
                             );
