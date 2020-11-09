@@ -11,7 +11,7 @@ import 'package:dsc_ur/TeamMemberPages/malachi.dart';
 import 'package:dsc_ur/TeamMemberPages/paetin.dart';
 import 'package:dsc_ur/TeamMemberPages/shlok.dart';
 import 'package:dsc_ur/TeamMemberPages/simmy.dart';
-import 'package:dsc_ur/TeamMemberPages/thomas.dart';
+import 'package:dsc_ur/TeamMemberPages/Tom/thomas.dart';
 // ORIGINAL REPO OWNERS IMPORTS
 import 'package:dsc_ur/utils/colors.dart';
 import 'package:dsc_ur/utils/text_styles.dart';

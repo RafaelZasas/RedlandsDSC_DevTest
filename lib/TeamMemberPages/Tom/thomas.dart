@@ -1,5 +1,11 @@
+import 'package:dsc_ur/Dashboard_UI_Pages/gradients_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:shimmer/shimmer.dart';
+
+import 'chartstuff.dart';
+
 
 class TomPage extends StatefulWidget {
   @override
@@ -11,7 +17,7 @@ class _TomPageState extends State<TomPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Column(
+        child: ListView(
           children: <Widget>[
             AppBar(
               title: Text("Thomas Reznik's Page"),
@@ -28,8 +34,10 @@ class _TomPageState extends State<TomPage> {
                 top: 50.0,
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center, //Center Row contents horizontally,
-                crossAxisAlignment: CrossAxisAlignment.center, //Center Row contents vertically,
+                mainAxisAlignment: MainAxisAlignment.center,
+                //Center Row contents horizontally,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                //Center Row contents vertically,
                 // giving space between back button and name
                 children: [
                   Text(
@@ -53,8 +61,11 @@ class _TomPageState extends State<TomPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   RaisedButton(
-                    onPressed: null,
-                    child: Text('Disabled Button', style: TextStyle(fontSize: 20)),
+                    onPressed: () => _onAlertWithCustomContentPressed(context),
+                    child: Text(
+                      'Lit Button',
+                      style: TextStyle(fontSize: 20),
+                    ),
                   ),
                   FlutterLogo(
                     textColor: Colors.lightBlueAccent,
@@ -73,12 +84,64 @@ class _TomPageState extends State<TomPage> {
                       return null;
                     },
                   ),
+                  SizedBox(
+                    width: 200.0,
+                    height: 100.0,
+                    child: Shimmer.fromColors(
+                      baseColor: Colors.red,
+                      highlightColor: Colors.yellow,
+                      child: Text(
+                        'sick shit',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 34.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  )
+
                 ],
               ),
             ),
+
           ],
+
         ),
       ),
     );
   }
+}
+
+//Alert custom content
+_onAlertWithCustomContentPressed(context) {
+  Alert(
+      context: context,
+      title: "LOGIN",
+      content: Column(
+        children: <Widget>[
+          TextField(
+            decoration: InputDecoration(
+              icon: Icon(Icons.account_circle),
+              labelText: 'Username',
+            ),
+          ),
+          TextField(
+            obscureText: true,
+            decoration: InputDecoration(
+              icon: Icon(Icons.lock),
+              labelText: 'Password',
+            ),
+          ),
+        ],
+      ),
+      buttons: [
+        DialogButton(
+          onPressed: () => Navigator.pop(context),
+          child: Text(
+            "LOGIN",
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
+        )
+      ]).show();
 }
