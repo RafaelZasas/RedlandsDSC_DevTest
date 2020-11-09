@@ -2,6 +2,7 @@ import 'package:dsc_ur/Dashboard_UI_Pages/about_page.dart';
 import 'package:dsc_ur/Dashboard_UI_Pages/gradients_page.dart';
 import 'package:dsc_ur/Dashboard_UI_Pages/home_page.dart';
 import 'package:dsc_ur/Dashboard_UI_Pages/material_page.dart';
+import 'package:dsc_ur/TeamMemberPages/Andrew/about_me.dart';
 import 'package:dsc_ur/utils/colors.dart';
 import 'package:dsc_ur/utils/text_styles.dart';
 import 'package:dsc_ur/utils/ui_helpers.dart';
@@ -173,7 +174,7 @@ class _AndrewPageState extends State<AndrewPage> {
                               context,
                               CupertinoPageRoute(
                                 builder: (context) {
-                                  return MyAboutPage();
+                                  return AboutMe();
                                 },
                               ),
                             );
