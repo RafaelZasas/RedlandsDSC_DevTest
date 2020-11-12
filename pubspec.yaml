@@ -19,16 +19,19 @@ dependencies:
   gradient_widgets: ^0.5.2
   liquid_swipe: ^1.5.0
   google_fonts: ^1.1.1
+  #Bottom App Bar
+  convex_bottom_bar: ^2.6.0
+
   # Functionality
   url_launcher: ^5.7.10
   cached_network_image: ^2.3.3
   carousel_slider: ^2.3.1
   rflutter_alert: ^1.1.0
   flutter_spinkit: ^4.1.2+1
-  convex_bottom_bar: ^2.6.0
   shimmer: ^1.1.2 #Makes your words shimmer
   fl_chart: ^0.12.0  #Cool charts
-  # Firebase
+
+  # Firebase Related Imports
   firebase_core: ^0.5.2  # Firebase Core Flutter SDK
 
   # FlutterFire plugin for Google Analytics
@@ -50,19 +53,13 @@ dependencies:
   # Firebase-App Performance Monitoring
   firebase_performance: ^0.4.2
 
-  #Bottom App Bar
-  convex_bottom_bar: ^2.6.0
 
 
 
 
 dev_dependencies:
   flutter_launcher_icons: ^0.7.5
-<<<<<<< Updated upstream
-  flutter_spinkit: ^4.1.2+1
-=======
 
->>>>>>> Stashed changes
 
 flutter_icons:
   android: 'launcher_icon'

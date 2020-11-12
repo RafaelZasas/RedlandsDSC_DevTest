@@ -1,11 +1,7 @@
-import 'package:dsc_ur/Dashboard_UI_Pages/gradients_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:shimmer/shimmer.dart';
-
-import 'chartstuff.dart';
-
 
 class TomPage extends StatefulWidget {
   @override
@@ -91,7 +87,7 @@ class _TomPageState extends State<TomPage> {
                       baseColor: Colors.red,
                       highlightColor: Colors.yellow,
                       child: Text(
-                        'sick shit',
+                        'sick stuff',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 34.0,
@@ -100,13 +96,10 @@ class _TomPageState extends State<TomPage> {
                       ),
                     ),
                   )
-
                 ],
               ),
             ),
-
           ],
-
         ),
       ),
     );
