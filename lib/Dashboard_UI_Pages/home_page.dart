@@ -1,5 +1,5 @@
 // TEAM MEMBER PAGE IMPORTS
-import 'package:dsc_ur/Colaborative%20Project/reviews_page.dart';
+import 'package:dsc_ur/CollaborativeProject/ReviewApp.dart';
 import 'package:dsc_ur/TeamMemberPages/Andrew/andrew.dart';
 import 'package:dsc_ur/TeamMemberPages/Justin/justin.dart';
 import 'package:dsc_ur/TeamMemberPages/Kimmy/kimmy.dart';
@@ -153,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       } else if (index == 12) {
                                         return KimmyPage();
                                       } else if (index == 13) {
-                                        return ReviewsPage();
+                                        return ReviewApp();
                                       }
                                       {
                                         return null;

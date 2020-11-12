@@ -1,19 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ReviewsPage extends StatefulWidget {
+class SubmitReviewsPage extends StatefulWidget {
   @override
-  _ReviewsPageState createState() => _ReviewsPageState();
+  _SubmitReviewsPageState createState() => _SubmitReviewsPageState();
 }
 
-class _ReviewsPageState extends State<ReviewsPage> {
+class _SubmitReviewsPageState extends State<SubmitReviewsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         child: Center(
           child: Text(
-            "Review App",
+            "Submit Review Page",
             style: TextStyle(fontSize: 50),
           ),
         ),
